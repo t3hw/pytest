@@ -1,2 +1,12 @@
 
 .idea/workspace.xml
+*.pyc
+OutputFiles/XML/Output.xml
+OutputFiles/JSON/Output.json
+OutputFiles/CSV/Query7.csv
+OutputFiles/CSV/Query6.csv
+OutputFiles/CSV/Query5.csv
+OutputFiles/CSV/Query4.csv
+OutputFiles/CSV/Query3.csv
+OutputFiles/CSV/Query2.csv
+OutputFiles/CSV/Query1.csv
