@@ -175,16 +175,13 @@ class DBManager:
         return result
 
     @staticmethod
-    def executeAllQueries(dbFile):
-        connection = DBManager.getConnection(dbFile)
+    def executeAllQueries(connection):
 
         results = []
 
         for i, query in enumerate(DBManager.queries):
             resultTable = DBManager.executeQuery(connection, query, DBManager.queryArgs[i])
             results.append(resultTable)
-
-        DBManager.closeConnection(connection)
 
         return results
 

@@ -3,15 +3,11 @@ from DB import DBManager
 
 
 class IncomingMessageHandler:
-    def HandleMessage(self, dbName, action):
-        print('Recieved incoming message')
-        print('DB Name: ' + dbName)
-        print('Output Type: ' + action)
-
+    def HandleMessage(self, connection, action):
         dbm = DBManager.DBManager
         results = None
         try:
-            results = dbm.executeAllQueries(dbName)
+            results = dbm.executeAllQueries(connection)
         except Exception as e:
             print('Error executing queries')
             print(e)
