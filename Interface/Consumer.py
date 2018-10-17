@@ -34,12 +34,9 @@ class Consumer:
             errCode = -99
 
         # close the connection if it is was opened
-        try:
-            connection
-        except NameError:
-            pass
-        else:
+        finally:
             connection.close()
+
 
         # successful execution
         return errCode

@@ -1,9 +1,8 @@
 import sqlite3
-from sqlite3 import Error
+from sqlite3 import Error, Cursor
 import os.path
 
 class DBManager:
-    conn = None
 
     queryArgs = (None,             # 1
                  None,             # 2
@@ -96,12 +95,12 @@ class DBManager:
                 "   and i.trackid = t.trackid " 
                 "   and t.albumid = a.albumid " 
                 "group by i.invoiceid, a.title) " 
-                "select * " 
+                "select title, count " 
                 "from w_count w " 
                 "where w.count = (select max(count) from w_count)"
                 ,
                 # 7 customers for invoices with 2 or more missing fields
-                "select distinct c.firstname || ' ' || c.lastname " 
+                "select distinct c.firstname || ' ' || c.lastname customername " 
                 "from invoices i " 
                 "    ,customers c " 
                 "where (select count(*) " 
@@ -118,53 +117,101 @@ class DBManager:
 
     @staticmethod
     def getConnection(db_file):
+        conn = None
         try:
-            if DBManager.conn is None:
-                BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-                db_path = os.path.join(BASE_DIR, db_file + ".db")
-                DBManager.conn = sqlite3.connect(db_path)
+            BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+            db_path = os.path.join(BASE_DIR, db_file + ".db")
+            conn = sqlite3.connect(db_path)
         except Error as e:
             print(e)
 
-    @staticmethod
-    def closeConnection():
-        if DBManager.conn is not None:
-            DBManager.conn.close()
+        return conn
 
     @staticmethod
-    def select(statement, args):
-        cur = DBManager.conn.cursor()
+    def closeConnection(conn):
+        if conn is not None:
+            conn.close()
+
+    @staticmethod
+    def select(connection, statement, args):
+        cur: Cursor = connection.cursor()
 
         if args is None:
             cur.execute(statement)
         else:
             cur.execute(statement, args)
 
+        colNames = list(map(lambda x: x[0], cur.description))
+
         rows = cur.fetchall()
-        return rows
+
+        queryResult = {'Column Names': colNames,
+                       'Query Result': rows}
+
+        return queryResult
 
     @staticmethod
-    def insert(statement, args):
-        cur = DBManager.conn.cursor()
-        cur.execute(statement, args)
+    def insert(connection, statement, row):
+        cur = connection.cursor()
+        cur.execute(statement, row)
         return cur.lastrowid
 
     @staticmethod
-    def executeQuery(query, *args):
+    def insertRows(conn, statement, rows):
+        for row in rows:
+            DBManager.insert(conn, statement, row)
+
+    @staticmethod
+    def deleteAllRows(connection, table):
+        cur: Cursor = connection.cursor()
+
+        cur.execute('delete from ' + table)
+
+    @staticmethod
+    def executeQuery(connection, query, *args):
         *params, = args
-        print(query, params[0])
-        result = DBManager.select(query, params[0])
+
+        result = DBManager.select(connection, query, params[0])
         return result
 
     @staticmethod
     def executeAllQueries(dbFile):
-        DBManager.getConnection(dbFile)
+        connection = DBManager.getConnection(dbFile)
 
         results = []
 
         for i, query in enumerate(DBManager.queries):
-            results.append(DBManager.executeQuery(query, DBManager.queryArgs[i]))
+            resultTable = DBManager.executeQuery(connection, query, DBManager.queryArgs[i])
+            results.append(resultTable)
 
-        DBManager.closeConnection()
+        DBManager.closeConnection(connection)
 
         return results
+
+    '''
+    @staticmethod
+    def select2(statement, args):
+        cur: Cursor = DBManager.conn.cursor()
+
+        if args is None:
+            cur.execute(statement)
+        else:
+            cur.execute(statement, args)
+
+        colNames = list(map(lambda x: x[0], cur.description))
+
+        rows = []
+        for row in cur:
+            cols = {}
+            for i, col in enumerate(colNames):
+                cols[col] = row[i]
+            rows.append(cols)
+
+
+        #rows = cur.fetchall()
+
+        #queryResult = {'Column Names': colNames,
+        #               'Query Result': rows}
+
+        return rows
+    '''
