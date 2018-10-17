@@ -17,16 +17,16 @@ class FWFactory:
         return JSONFileWriter.JSONFileWriter()
 
     @staticmethod
-    def getInsertBuilder():
+    def getTableWriter():
         return TableWriter.TableWriter()
 
     @staticmethod
     def getFW(writerType):
         switcher = {
-            "CSV":  FWFactory.getCSVFW(),
-            "XML":  FWFactory.getXMLFW(),
-            "JSON": FWFactory.getJSONFW(),
-            "TABLE": FWFactory.getInsertBuilder()
+            "CSV":   FWFactory.getCSVFW(),
+            "XML":   FWFactory.getXMLFW(),
+            "JSON":  FWFactory.getJSONFW(),
+            "TABLE": FWFactory.getTableWriter()
         }
 
         return switcher.get(writerType)

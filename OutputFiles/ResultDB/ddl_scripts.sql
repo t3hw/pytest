@@ -38,3 +38,12 @@ CREATE TABLE Query6 (
 CREATE TABLE Query7 (
     customername  CHAR
 );
+
+
+    delete from Query1;
+    delete from Query2;
+    delete from Query3;
+    delete from Query4;
+    delete from Query5;
+    delete from Query6;
+    delete from Query7;
