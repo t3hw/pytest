@@ -1,5 +1,6 @@
 from Interface import Producer, Consumer
 from MessageHandler import Message
+from DB import DBManager
 
 
 def main():
@@ -20,5 +21,10 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    a = 1
+    dbm = DBManager.DBManager
+    results = dbm.executeAllQueries("chinook")
+    #main()
+
+    a=1
 ##

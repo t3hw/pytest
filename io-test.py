@@ -1,7 +1,6 @@
 import test
-import sqlite3
 
-text = open("test.txt", "r")
+text = open("test.txt", "w")
 
 print(text.readline())
 
