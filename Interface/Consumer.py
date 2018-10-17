@@ -1,6 +1,6 @@
 import sys
 import pika
-from pika import exceptions
+from pika import exceptions, BlockingConnection
 from MessageHandler import IncomingMessageHandler, Message
 
 
@@ -9,34 +9,29 @@ class Consumer:
     def callback(self, ch, method, properties, body):
         msg = Message.Message().initFromJson(body)
 
-        IncomingMessageHandler.IncomingMessageHandler().HandleMessage(msg)
+        if msg.action == "StopConsuming":
+            print('*** consumer ending *** ')
+            ch.stop_consuming()
+        else:
+            IncomingMessageHandler.IncomingMessageHandler().HandleMessage(msg.dbName,msg.action)
 
     def read(self):
-        errCode = 0
-
         try:
             connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
-            channel = connection.channel()
+            channel: BlockingConnection = connection.channel()
 
             queueName = 'testQueue'
             channel.basic_consume(self.callback,
                                   queue=queueName,
                                   no_ack=True)
 
-            print(' [*] Waiting for messages. To exit press CTRL+C')
+            print('*** Waiting for messages. ***')
 
             channel.start_consuming()
 
         except exceptions.AMQPError:
             type, value, traceback = sys.exc_info()
             print('Error receiving message %s: ' % (value.args[0]))
-
-            errCode = -99
-
         # close the connection if it is was opened
         finally:
             connection.close()
-
-
-        # successful execution
-        return errCode

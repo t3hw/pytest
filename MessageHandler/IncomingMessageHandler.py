@@ -3,21 +3,21 @@ from DB import DBManager
 
 
 class IncomingMessageHandler:
-    def HandleMessage(self, msg):
+    def HandleMessage(self, dbName, action):
         print('Recieved incoming message')
-        print('DB Name: ' + msg.dbName)
-        print('Output Type: ' + msg.fileType)
+        print('DB Name: ' + dbName)
+        print('Output Type: ' + action)
 
         dbm = DBManager.DBManager
         results = None
         try:
-            results = dbm.executeAllQueries(msg.dbName)
+            results = dbm.executeAllQueries(dbName)
         except Exception as e:
             print('Error executing queries')
             print(e)
 
         try:
-            writer = FWFactory.FWFactory.getFW(msg.fileType)
+            writer = FWFactory.FWFactory.getFW(action)
             writer.write(results)
         except Exception as e:
             print('Error saving output')

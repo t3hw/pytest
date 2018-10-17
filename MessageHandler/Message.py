@@ -6,17 +6,17 @@ class Message:
 
     def __init__(self):
         self.dbName = ''
-        self.fileType = ''
+        self.action = ''
 
-    def initParams(self, dbName, fileType):
+    def initParams(self, dbName, action):
         self.dbName = dbName
-        self.fileType = fileType
+        self.action = action
         return self
 
     def initFromJson(self, string):
         msgJson = json.loads(string, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
         self.dbName = msgJson.dbName
-        self.fileType = msgJson.fileType
+        self.action = msgJson.action
         return self
 
 
