@@ -1,37 +1,49 @@
-from IOManager import DB2CSV, DB2XML, DB2JSON, DB2DB, JSON2DB
-
+from IOManager.InputHandlers import DBInputHandler, JSONInputHandler
+from IOManager.OutputHandlers import XMLOutputHandler, DBOutputHandler, JSONOutputHandler, CSVOutputHandler
 
 
 class IOFactory:
 
     @staticmethod
-    def getDB2CSV():
-        return DB2CSV.DB2CSV()
+    def getDBInputHandler():
+        return DBInputHandler.DBInputHandler()
 
     @staticmethod
-    def getDB2XML():
-        return DB2XML.DB2XML()
+    def getJSONInputHandler():
+        return JSONInputHandler.JSONInputHandler()
 
     @staticmethod
-    def getDB2JSON():
-        return DB2JSON.DB2JSON()
+    def getCSVOutputHandler():
+        return CSVOutputHandler.CSVOutputHandler()
 
     @staticmethod
-    def getDB2DB():
-        return DB2DB.DB2DB()
+    def getXMLOutputHandler():
+        return XMLOutputHandler.XMLOutputHandler()
 
     @staticmethod
-    def getJSON2DB():
-        return JSON2DB.JSON2DB()
+    def getJSONOutputHandler():
+        return JSONOutputHandler.JSONOutputHandler()
 
     @staticmethod
-    def getIO(factoryType):
+    def getDBOutputHandler():
+        return DBOutputHandler.DBOutputHandler()
+
+    @staticmethod
+    def getInput(factoryType):
         switcher = {
-            "DB2CSV":  IOFactory.getDB2CSV(),
-            "DB2XML":  IOFactory.getDB2XML(),
-            "DB2JSON": IOFactory.getDB2JSON(),
-            "DB2DB":   IOFactory.getDB2DB(),
-            "JSON2DB": IOFactory.getJSON2DB()
+            "DB":  IOFactory.getDBInputHandler(),
+            "JSON": IOFactory.getJSONInputHandler()
+        }
+
+        return switcher.get(factoryType)
+
+    @staticmethod
+    def getOutput(factoryType):
+        switcher = {
+            "CSV":  IOFactory.getCSVOutputHandler(),
+            "XML":  IOFactory.getXMLOutputHandler(),
+            "JSON": IOFactory.getJSONOutputHandler(),
+            "DB":   IOFactory.getDBOutputHandler()
         }
 
         return switcher.get(factoryType)

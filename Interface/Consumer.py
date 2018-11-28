@@ -35,12 +35,13 @@ class Consumer:
 
         print('Recieved incoming message')
         print('DB Name: ' + msg.dbName)
-        print('Output Type: ' + msg.action)
+        print('Output Type: ' + msg.input)
+        print('Output Type: ' + msg.output)
 
-        if msg.action != "StopConsuming":
+        if msg.input != "StopConsuming":
             if self.dbConnection is None:
                 self.dbConnection = DBManager.getConnection(msg.dbName)
-            IncomingMessageHandler.IncomingMessageHandler().HandleMessage(self.dbConnection, msg.action)
+            IncomingMessageHandler.IncomingMessageHandler().HandleMessage(self.dbConnection, msg.input, msg.output)
         else:
             print('*** consumer ending *** ')
             DBManager.closeConnection(self.dbConnection)

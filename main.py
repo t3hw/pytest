@@ -8,12 +8,11 @@ class Main:
 
     @staticmethod
     def main():
-        messageBody1 = Message.Message().initParams('chinook', 'DB2JSON')
-        messageBody2 = Message.Message().initParams('chinook', 'DB2XML')
-        messageBody3 = Message.Message().initParams('chinook', 'DB2CSV')
-        messageBody4 = Message.Message().initParams('chinook', 'DB2DB')
-        messageBody5 = Message.Message().initParams('chinook', 'JSON2DB')
-        messageBody6 = Message.Message().initParams('', 'StopConsuming')
+        messageBody1 = Message.Message().initParams('chinook', 'DB', 'JSON')
+        messageBody2 = Message.Message().initParams('chinook', 'JSON', 'XML')
+        messageBody3 = Message.Message().initParams('chinook', 'JSON', 'DB')
+        messageBody4 = Message.Message().initParams('chinook', 'DB', 'CSV')
+        messageBody5 = Message.Message().initParams('', 'StopConsuming', '')
 
 
         print('*** Before send messages *** ')
@@ -22,10 +21,8 @@ class Main:
         Producer.Sender.send(messageBody1)
         Producer.Sender.send(messageBody2)
         Producer.Sender.send([messageBody3,messageBody4])
-        #Producer.Sender.send(messageBody5)
+        Producer.Sender.send(messageBody5)
         #Producer.Sender.send([messageBody, messageBody, messageBody, messageBody, messageBody])
-
-        Producer.Sender.send(messageBody6)
 
         print('*** Messages sent *** ')
 

@@ -6,17 +6,20 @@ class Message:
 
     def __init__(self):
         self.dbName = ''
-        self.action = ''
+        self.input = ''
+        self.output = ''
 
-    def initParams(self, dbName, action):
+    def initParams(self, dbName, input, output):
         self.dbName = dbName
-        self.action = action
+        self.input = input
+        self.output = output
         return self
 
     def initFromJson(self, string):
         msgJson = json.loads(string, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
         self.dbName = msgJson.dbName
-        self.action = msgJson.action
+        self.input = msgJson.input
+        self.output = msgJson.output
         return self
 
 
