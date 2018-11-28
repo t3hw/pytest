@@ -4,8 +4,11 @@ from DB import DBManager
 
 class DBInputHandler(IO.IO):
 
-    def getResults(self, connection):
+    def getResults(self, dataSource):
         dbm = DBManager.DBManager
+
+        connection = dbm.getConnection(dataSource)
+
         results = None
 
         try:

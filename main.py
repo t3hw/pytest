@@ -9,9 +9,9 @@ class Main:
     @staticmethod
     def main():
         messageBody1 = Message.Message().initParams('chinook', 'DB', 'JSON')
-        messageBody2 = Message.Message().initParams('chinook', 'JSON', 'XML')
-        messageBody3 = Message.Message().initParams('chinook', 'JSON', 'DB')
-        messageBody4 = Message.Message().initParams('chinook', 'DB', 'CSV')
+        messageBody2 = Message.Message().initParams('chinook2', 'DB', 'XML')
+        messageBody3 = Message.Message().initParams('InputFile1', 'JSON', 'DB')
+        messageBody4 = Message.Message().initParams('InputFile1', 'JSON', 'CSV')
         messageBody5 = Message.Message().initParams('', 'StopConsuming', '')
 
 
@@ -72,5 +72,5 @@ if __name__ == '__main__':
 
     Main.main()
 
-    #Main.runFib()
+    Main.runFib()
 

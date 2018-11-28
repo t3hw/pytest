@@ -111,22 +111,32 @@ class DBManager:
                 "   and c.customerid = i.customerid"
     )
 
+    connections = {}
+
     @staticmethod
     def getConnection(db_file):
         conn = None
-        try:
-            BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-            db_path = os.path.join(BASE_DIR, db_file + ".db")
-            conn = sqlite3.connect(db_path)
-        except Error as e:
-            print(e)
+
+        if db_file in DBManager.connections:
+            conn = DBManager.connections[db_file]
+
+        if conn is None:
+            try:
+                BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+                db_path = os.path.join(BASE_DIR, db_file + ".db")
+                conn = sqlite3.connect(db_path)
+
+                DBManager.connections[db_file] = conn
+            except Error as e:
+                print(e)
 
         return conn
 
     @staticmethod
-    def closeConnection(conn):
-        if conn is not None:
-            conn.close()
+    def closeConnections():
+        for dbName, dbConnection in DBManager.connections.items():
+            if dbConnection is not None:
+                dbConnection.close()
 
 
     @staticmethod

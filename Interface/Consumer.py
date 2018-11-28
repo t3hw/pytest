@@ -6,7 +6,6 @@ from MessageHandler import IncomingMessageHandler, Message
 
 
 class Consumer:
-    dbConnection = None
 
     def read(self):
         try:
@@ -34,16 +33,14 @@ class Consumer:
         msg = Message.Message().initFromJson(body)
 
         print('Recieved incoming message')
-        print('DB Name: ' + msg.dbName)
+        print('DB Name: ' + msg.dataSource)
         print('Output Type: ' + msg.input)
         print('Output Type: ' + msg.output)
 
         if msg.input != "StopConsuming":
-            if self.dbConnection is None:
-                self.dbConnection = DBManager.getConnection(msg.dbName)
-            IncomingMessageHandler.IncomingMessageHandler().HandleMessage(self.dbConnection, msg.input, msg.output)
+            IncomingMessageHandler.IncomingMessageHandler().HandleMessage(msg.dataSource, msg.input, msg.output)
         else:
             print('*** consumer ending *** ')
-            DBManager.closeConnection(self.dbConnection)
+            DBManager.closeConnections()
             ch.stop_consuming()
 

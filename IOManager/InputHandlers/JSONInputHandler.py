@@ -4,11 +4,11 @@ import json
 
 class JSONInputHandler(IO.IO):
 
-    def getResults(self, connection):
+    def getResults(self, dataSource):
         jsonstr = None
 
         try:
-            with open('./InputFiles/Input.json', 'r') as file:
+            with open('./InputFiles/' + dataSource + '.json', 'r') as file:
                 inputFile = file.read()
                 jsonstr = json.loads(inputFile)
         except Exception as e:
