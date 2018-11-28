@@ -8,10 +8,16 @@ class Main:
 
     @staticmethod
     def main():
-        messageBody1 = Message.Message().initParams('chinook', 'DB', 'JSON')
+        #messageBody1 = Message.Message().initParams('chinook', 'DB', 'JSON')
         messageBody2 = Message.Message().initParams('chinook2', 'DB', 'XML')
-        messageBody3 = Message.Message().initParams('InputFile1', 'JSON', 'DB')
+        messageBody3 = Message.Message().initParams('chinook', 'DB', 'DB')
+        #messageBody4 = Message.Message().initParams('chinook2', 'DB', 'CSV')
+
+        messageBody1 = Message.Message().initParams('InputFile2', 'JSON', 'JSON')
+        #messageBody2 = Message.Message().initParams('InputFile2', 'JSON', 'XML')
+        #messageBody3 = Message.Message().initParams('InputFile1', 'JSON', 'DB')
         messageBody4 = Message.Message().initParams('InputFile1', 'JSON', 'CSV')
+
         messageBody5 = Message.Message().initParams('', 'StopConsuming', '')
 
 
