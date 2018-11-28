@@ -9,7 +9,7 @@ class DBManager:
                  None,             # 3
                  None,             # 4
                  None,             # 5
-                 ('USA', 2011),  # 6
+                 ('USA', 2011),    # 6
                  None)             # 7
 
     queries = (  # 1 song list with data
@@ -17,7 +17,7 @@ class DBManager:
                 "  from tracks t, albums a, genres g, artists r " 
                 " where t.albumid = a.albumid " 
                 "   and t.genreid = g.genreid " 
-                "   and a.artistid = r.artistid " 
+                "   and a.artistid = r.artistid "
                 "order by r.name, a.title"
                 ,
                 # 2 list of customers with customer data
@@ -30,7 +30,7 @@ class DBManager:
                 "           ' ' || city || " 
                 "       CASE WHEN state IS NULL THEN '' ELSE ' ' || state END || " 
                 "           ' ' || country as full_address " 
-                " from customers"
+                " from customers "
                 ,
                 # 3 distinct emails per country
                 "select distinct country " 
@@ -45,12 +45,10 @@ class DBManager:
                 " from invoices inv "
                 #       for each invoice, how many distinct albums "
                 "      ,(select i.InvoiceId "
-                "              ,count(distinct a.albumid) count "
+                "              ,count(distinct t.albumid) count "
                 "          from invoice_items i "
                 "              ,tracks t "
-                "              ,albums a "
                 "         where i.trackid = t.trackid "
-                "           and t.albumid = a.albumid "
                 "        group by i.invoiceid) iic "
                 " where inv.invoiceid = iic.invoiceid "
                 "  group by billingcountry"
@@ -62,13 +60,11 @@ class DBManager:
                 "  (select v.billingcountry, i.albumid, count(*) count " 
                 "     from invoices v " +
                 #          for each invoice, get the albums that were purchased in it
-                "        ,(select i1.InvoiceId, a.AlbumId " 
+                "        ,(select i1.InvoiceId, t.AlbumId " 
                 "          from invoice_items i1 " 
                 "              ,tracks t " 
-                "              ,albums a " 
                 "          where i1.trackid = t.trackid " 
-                "            and t.albumid = a.albumid "
-                "          group by i1.invoiceid, a.AlbumId) i " 
+                "          group by i1.invoiceid, t.AlbumId) i " 
                 "   where v.invoiceid = i.invoiceid " 
                 "   group by v.billingcountry, i.albumid) " 
                 "select w.billingcountry, a.title, count " 
@@ -132,6 +128,27 @@ class DBManager:
         if conn is not None:
             conn.close()
 
+
+    @staticmethod
+    def insert(connection, statement, row):
+        cur = connection.cursor()
+        cur.execute(statement, row)
+        return cur.lastrowid
+
+    @staticmethod
+    def insertRows(conn, statement, rows):
+        for row in rows:
+            DBManager.insert(conn, statement, row)
+
+    '''
+    Removed method because the table creation script was added for the result DB
+    @staticmethod
+    def deleteAllRows(connection, table):
+        cur: Cursor = connection.cursor()
+
+        cur.execute('delete from ' + table)
+    '''
+
     @staticmethod
     def select(connection, statement, args):
         cur: Cursor = connection.cursor()
@@ -151,23 +168,6 @@ class DBManager:
         return queryResult
 
     @staticmethod
-    def insert(connection, statement, row):
-        cur = connection.cursor()
-        cur.execute(statement, row)
-        return cur.lastrowid
-
-    @staticmethod
-    def insertRows(conn, statement, rows):
-        for row in rows:
-            DBManager.insert(conn, statement, row)
-
-    @staticmethod
-    def deleteAllRows(connection, table):
-        cur: Cursor = connection.cursor()
-
-        cur.execute('delete from ' + table)
-
-    @staticmethod
     def executeQuery(connection, query, *args):
         *params, = args
 
@@ -181,9 +181,19 @@ class DBManager:
 
         for i, query in enumerate(DBManager.queries):
             resultTable = DBManager.executeQuery(connection, query, DBManager.queryArgs[i])
+            resultTable.update( {'QueryNumber' : i+1 } )
             results.append(resultTable)
 
         return results
+
+    @staticmethod
+    def InitResultDB(conn):
+        c = conn.cursor()
+
+        initScript = open('./DB/result_db_ddl_scripts.sql', 'r').read()
+
+        c.executescript(initScript)
+        c.close()
 
     '''
     @staticmethod

@@ -1,4 +1,4 @@
-CREATE TABLE Query1 (
+CREATE TABLE IF NOT EXISTS Query1 (
     TrackName  CHAR,
     ArtistName CHAR,
     AlbumTitle CHAR,
@@ -6,7 +6,7 @@ CREATE TABLE Query1 (
     Genre      CHAR
 );
 
-CREATE TABLE Query2 (
+CREATE TABLE IF NOT EXISTS Query2 (
     FirstName     CHAR,
     LastName      CHAR,
     Phone         CHAR,
@@ -14,28 +14,28 @@ CREATE TABLE Query2 (
     full_address  CHAR
 );
 
-CREATE TABLE Query3 (
+CREATE TABLE IF NOT EXISTS Query3 (
     Country         CHAR,
     distinct_emails CHAR
 );
 
-CREATE TABLE Query4 (
+CREATE TABLE IF NOT EXISTS Query4 (
     BillingCountry  CHAR,
     sum CHAR
 );
 
-CREATE TABLE Query5 (
+CREATE TABLE IF NOT EXISTS Query5 (
     billingcountry  CHAR,
     Title           CHAR,
     count           CHAR
 );
 
-CREATE TABLE Query6 (
+CREATE TABLE IF NOT EXISTS Query6 (
     title  CHAR,
     count  CHAR
 );
 
-CREATE TABLE Query7 (
+CREATE TABLE IF NOT EXISTS Query7 (
     customername  CHAR
 );
 

@@ -12,9 +12,9 @@ class InsertBuilder:
                             '(?)')          # 7
 
     def __init__(self, queryNum):
-        self.insertStatement = 'INSERT INTO Query' + str(queryNum+1) +\
-                              ' VALUES ' + InsertBuilder.queryValuesTemplates[queryNum]
-        self.tableName = 'Query' + str(queryNum+1)
+        self.insertStatement = 'INSERT INTO Query' + str(queryNum) +\
+                              ' VALUES ' + InsertBuilder.queryValuesTemplates[queryNum-1]
+        self.tableName = 'Query' + str(queryNum)
 
     def getInsertStatement(self):
         return self.insertStatement

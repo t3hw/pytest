@@ -1,20 +1,19 @@
-from OutputManager import FWFactory
-from DB import DBManager
+from IOManager import IOFactory
 
 
 class IncomingMessageHandler:
     def HandleMessage(self, connection, action):
-        dbm = DBManager.DBManager
+        IOHandler = IOFactory.IOFactory.getIO(action)
         results = None
+
         try:
-            results = dbm.executeAllQueries(connection)
+            results = IOHandler.getResults(connection)
         except Exception as e:
-            print('Error executing queries')
+            print('Error reading data')
             print(e)
 
         try:
-            writer = FWFactory.FWFactory.getFW(action)
-            writer.write(results)
+            IOHandler.write(results)
         except Exception as e:
             print('Error saving output')
             print(e)
