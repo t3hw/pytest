@@ -30,7 +30,7 @@ class Main:
         Producer.Sender.send(messageBody5)
         #Producer.Sender.send([messageBody, messageBody, messageBody, messageBody, messageBody])
 
-        print('*** Messages sent *** ')
+        print('*** Messages sent ***  ')
 
         print('*** listener running *** ')
         Consumer.Consumer().read()
