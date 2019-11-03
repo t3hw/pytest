@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8ea60d4-6b22-4a38-b9a0-a73300822448" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DB/chinook2.db" afterDir="false" />
+    <list default="true" id="a8ea60d4-6b22-4a38-b9a0-a73300822448" name="Default Changelist" comment="Done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/DBManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/DBManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IOManager/InputHandlers/DBInputHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOManager/InputHandlers/DBInputHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IOManager/InputHandlers/JSONInputHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOManager/InputHandlers/JSONInputHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputFiles/Input.json" beforeDir="false" afterPath="$PROJECT_DIR$/InputFiles/InputFile1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputFiles/Input2.json" beforeDir="false" afterPath="$PROJECT_DIR$/InputFiles/InputFile2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface/Consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/Consumer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHandler/IncomingMessageHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHandler/IncomingMessageHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHandler/Message.py" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHandler/Message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/CSV/Query7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/ResultDB/OutputQueries.db" beforeDir="false" afterPath="$PROJECT_DIR$/OutputFiles/ResultDB/OutputQueries.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputFiles/XML/Output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OutputFiles/XML/Output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,12 +15,12 @@
     <session id="-541964387">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -48,8 +29,8 @@
           <entry key="csv" value="40" />
           <entry key="dll_script" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="json" value="17" />
-          <entry key="py" value="295" />
+          <entry key="json" value="18" />
+          <entry key="py" value="296" />
           <entry key="pyd" value="1" />
           <entry key="pyi" value="2" />
           <entry key="sql" value="9" />
@@ -61,9 +42,9 @@
         <counts>
           <entry key="CSV" value="30" />
           <entry key="DBN-SQL" value="7" />
-          <entry key="JSON" value="17" />
+          <entry key="JSON" value="18" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="296" />
+          <entry key="Python" value="297" />
           <entry key="PythonStub" value="2" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="8" />
@@ -74,17 +55,17 @@
           <entry key="dummy" value="168" />
           <entry key="gitignore" value="1" />
           <entry key="json" value="2" />
-          <entry key="py" value="10620" />
+          <entry key="py" value="10648" />
           <entry key="sql" value="124" />
-          <entry key="txt" value="554" />
+          <entry key="txt" value="793" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="DBN-SQL" value="66" />
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="723" />
-          <entry key="Python" value="10620" />
+          <entry key="PLAIN_TEXT" value="962" />
+          <entry key="Python" value="10648" />
           <entry key="SQL" value="58" />
         </counts>
       </usages-collector>
@@ -96,21 +77,9 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DB/DBManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="136" selection-start-line="136" selection-end-line="136" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Interface/Consumer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="-280">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -218,8 +187,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="270" />
+    <option name="y" value="428" />
     <option name="width" value="2576" />
     <option name="height" value="1416" />
   </component>
@@ -231,26 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="pmtest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="pmtest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,11 +211,6 @@
               <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmtest" type="462c0819:PsiDirectoryNode" />
               <item name="DB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="InputFiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
@@ -287,42 +231,27 @@
             <path>
               <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="IOManager" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputHandlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
               <item name="MessageHandler" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
+          <expand>
             <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="pmtest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
             <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="CSV" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="ResultDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmtest" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="XML" type="462c0819:PsiDirectoryNode" />
+              <item name="pmtest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -337,18 +266,18 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/DB/DBManager.py" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\IOManager\InputHandlers" />
-      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\IOManager\OutputHandlers" />
-      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\DB" />
-      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\DB\Source" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\DB" />
       <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\InputFiles" />
       <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\OutputFiles\CSV" />
       <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\QueryResults" />
       <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\venv\Lib\site-packages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\IOManager\InputHandlers" />
+      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\IOManager\OutputHandlers" />
+      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\DB" />
+      <recent name="C:\Users\t3hwa\Documents\GitHub\pmtest\DB\Source" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -498,7 +427,35 @@
       <option name="project" value="LOCAL" />
       <updated>1543395092035</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finished separating everything.&#10;&#10;Added support for multiple data sources, can use multiple database connections.&#10;terminates the connection when the consumer shuts down.">
+      <created>1543398431169</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543398431169</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Finished separating everything.&#10;&#10;Added support for multiple data sources, can use multiple database connections.&#10;terminates the connection when the consumer shuts down.">
+      <created>1543399004134</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543399004134</updated>
+    </task>
+    <task id="LOCAL-00013" summary=".">
+      <created>1543399100340</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543399100340</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ALL DONE">
+      <created>1543399207974</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543399207974</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -511,10 +468,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="2552" y="341" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13831478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
@@ -523,13 +479,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49920508" weight="0.3299532" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49761525" weight="0.3299532" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49801272" visible="true" weight="0.39937598" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49801272" weight="0.39937598" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299532" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49841017" weight="0.3299532" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50158983" side_tool="true" weight="0.3299532" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.50158983" side_tool="true" visible="true" weight="0.45878524" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49960256" weight="0.3299532" />
       <window_info anchor="bottom" id="Console" order="11" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" />
@@ -576,11 +532,13 @@
     <MESSAGE value="sql done" />
     <MESSAGE value="90%% done, need to go through it all and make sure there arent any issues" />
     <MESSAGE value="done" />
-    <MESSAGE value="." />
     <MESSAGE value="finishing touches" />
     <MESSAGE value="1st set of edits. project is working. i might change some more" />
     <MESSAGE value="Separated the IO Manager to Input handlers and Output handlers,&#10;Changed the Message class to have an input parameter and an output parameter&#10;it is now possible to sent an input separately from the output and mix it all up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated the IO Manager to Input handlers and Output handlers,&#10;Changed the Message class to have an input parameter and an output parameter&#10;it is now possible to sent an input separately from the output and mix it all up." />
+    <MESSAGE value="Finished separating everything.&#10;&#10;Added support for multiple data sources, can use multiple database connections.&#10;terminates the connection when the consumer shuts down." />
+    <MESSAGE value="." />
+    <MESSAGE value="ALL DONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="ALL DONE" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -701,13 +659,7 @@
     <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/eggs.csv" />
     <entry file="file://$PROJECT_DIR$/OutputFiles/Query1.csv" />
     <entry file="file://$PROJECT_DIR$/OutputFiles/Query2.csv" />
-    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query5.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="26" selection-start-column="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query5.csv" />
     <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query4.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
@@ -715,13 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query3.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="23" selection-start-column="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query3.csv" />
     <entry file="file://$PROJECT_DIR$/DB/InsertStatements/Query1.py" />
     <entry file="file://$PROJECT_DIR$/OutputFiles/JSON/Output.xml" />
     <entry file="file://$PROJECT_DIR$/OutputFiles/XML/Output.json" />
@@ -762,18 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB/InsertBuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <marker date="1543391661534" expanded="true" signature="419:629" ph="..." />
-            <marker date="1543391661534" expanded="true" signature="628:629" ph="..." />
-            <marker date="1543391661534" expanded="true" signature="629:634" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/189925049/nt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -806,9 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,9 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,11 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <marker date="1543393746151" expanded="true" signature="9:15" ph="..." />
-            <marker date="1543393746151" expanded="true" signature="9:220" ph="..." />
-            <marker date="1543393746151" expanded="true" signature="169:188" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,9 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,33 +768,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-            <marker date="1543393746139" expanded="true" signature="79:84" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query2.csv">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="43" selection-start-column="31" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query1.csv">
-      <provider editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query2.csv" />
+    <entry file="file://$PROJECT_DIR$/OutputFiles/CSV/Query1.csv" />
     <entry file="file://$PROJECT_DIR$/OutputFiles/XML/Output.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -882,22 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OutputFiles/JSON/Output.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/InputFiles/InputFile1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="164" column="1" lean-forward="true" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
-          <folding>
-            <element signature="e#724685#726647#0" />
-            <element signature="e#764205#765032#0" />
-            <element signature="e#839#1160#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,9 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="33" selection-start-column="33" selection-end-column="33" />
-          <folding>
-            <marker date="1543394153393" expanded="true" signature="796:801" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,9 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,9 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,8 +833,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OutputFiles/JSON/Output.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="24959" selection-start-line="24959" selection-end-line="24959" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/DBManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/InsertBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <marker date="1543391661534" expanded="true" signature="419:629" ph="..." />
+            <marker date="1543391661534" expanded="true" signature="628:629" ph="..." />
+            <marker date="1543391661534" expanded="true" signature="629:634" ph="..." />
           </folding>
         </state>
       </provider>
@@ -965,27 +868,17 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB/DBManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Interface/Consumer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="-280">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
