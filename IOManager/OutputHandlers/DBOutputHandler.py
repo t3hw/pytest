@@ -20,5 +20,5 @@ class DBOutputHandler(IO.IO):
         except Exception as e:
             print('Error writing to DB')
             print(e)
-        finally:
-            DBManager.DBManager.closeConnection(conn)
+        #finally:
+            #DBManager.DBManager.closeConnection(conn)

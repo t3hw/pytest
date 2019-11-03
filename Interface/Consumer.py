@@ -33,8 +33,8 @@ class Consumer:
         msg = Message.Message().initFromJson(body)
 
         print('Recieved incoming message')
-        print('DB Name: ' + msg.dataSource)
-        print('Output Type: ' + msg.input)
+        print('Input File Name: ' + msg.dataSource)
+        print('Input Type: ' + msg.input)
         print('Output Type: ' + msg.output)
 
         if msg.input != "StopConsuming":
