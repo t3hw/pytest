@@ -26,7 +26,7 @@
          from customers c1
 
     -- 4 how many distinct albums were sold in each country. each sale can have multiple distinct albums.
-    --   for our purposes 2 tracks from the same album in the same invoice would only count as 1
+    --   for our purposes 2 tracks from the same album in the same invoice would only count as 1  
     select billingcountry, sum(iic.count) sum
      from invoices inv
           --for each invoice, how many distinct albums
